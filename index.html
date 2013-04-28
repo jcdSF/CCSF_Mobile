@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<meta charset="utf-8"> 
+	<title>Home</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="apple-touch-startup-image" href="logo.png" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.css" />
+	<link rel="stylesheet" href="themes/my.css" />
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js"></script>
+
+	<link type="text/css" href="/skin/jplayer.blue.monday.css" rel="stylesheet" />  
+  	<script type="text/javascript" src="/js/jquery.jplayer.min.js"></script>
+
+
+<!--	<script>
+		$(document).on("pageshow", "#sermonsresources",
+			function() {
+				var myheight=window.innerHeight;
+				$("#sermonsresources").css("height",myheight+"px");
+			}
+		);
+		
+	</script>
+-->
+	
+  </head> 
+  <body>
+
+<!-- Home//////////////////////////////////
+/////////////////////////////////////////// -->
+  
+  <div data-role="page" id="home" data-theme="a">
+
+	<div data-role="panel" id="mypanel" data-position="right" data-display="push">
+		<p>Settings</p>
+		<ul data-role="listview">
+			<li>This is my panel</li>
+			<li>Log out?</li>
+		</ul>		
+	</div><!-- /panel -->
+
+	<div data-role="header" data-id="myFixedHeader" data-position="fixed"><!-- these two attributes together give the appearance of a fixed persistent header on all pages -->
+	
+		<h1>CCSF Mobile</h1>
+		
+		<a href="#mypanel" data-icon="bars" data-iconpos="notext" data-role="button" data-inline="true" class="ui-btn-right">Settings</a><!-- NOTE: the data-icon on the href here, but down in the ul below, I had to put it in the li, NOT the href!? -->
+	
+	</div><!-- /header -->
+	
+	<div data-role="content">
+<!--
+		<ul data-role="listview" class="ui-grid-a">
+			<li class="ui-block-a" data-icon="false"><a href="#calendar" data-transition="slidefade"><img src="images/1.png" style="max-width: 100%; max-height: 100%; width: 100%">Calendar</a>
+				</li>
+			<li class="ui-block-b" data-icon="false"><a href="#sermonsresources" data-transition="slidefade">Sermons &amp; Resources<img src="images/1.png" style="max-width: 100%; max-height: 100%; width: 100%"></a>
+				</li>
+			<li class="ui-block-c" data-icon="false"><a href="#social" data-transition="slidefade">Social<img src="images/1.png" style="max-width: 100%; max-height: 100%; width: 100%"></a>
+				</li>
+		</ul>
+-->
+		<ul data-role="listview" class="ui-grid-a">
+			<li onclick="$.mobile.changePage('#sermonsresources', {transition:'slide'});" class="ui-block-a" data-icon="false" id="snr-button"><h2>Sermons &amp; Resources</h2>
+			</li>
+			<li onclick="$.mobile.changePage('#calendar', {transition:'slide'});" class="ui-block-b" data-icon="false" id="cal-button"><h2>Calendar</h2>
+			</li>
+			<li onclick="$.mobile.changePage('#social', {transition:'slide'});" class="ui-block-c" data-icon="false" id="social-button"><h2>Social</h2>
+			</li>
+		</ul>
+		
+	</div><!-- /content -->
+  </div><!-- /page -->
+
+<!-- Calendar//////////////////////////////
+/////////////////////////////////////////// -->
+ 
+  <div data-role="page" id="calendar" data-add-back-btn="true" data-back-btn-text="notext" data-theme="a"> <!-- there doesn't seem to be any option to set this automatically generated back button text to "none" -->
+
+	<div data-role="panel" id="mypanel" data-position="right" data-display="push">
+		<p>Settings</p>
+		<ul data-role="listview">
+			<li>This is my panel</li>
+			<li>Log out?</li>
+		</ul>		
+	</div><!-- /panel -->
+  
+  	<div data-role="header" data-id="myFixedHeader" data-position="fixed">
+		<h1>Calendar!</h1>
+
+		<a href="#mypanel" data-role="button" data-icon="bars" data-iconpos="notext" data-inline="true"  class="ui-btn-right">Settings</a>
+
+	</div><!-- /header -->
+	
+	<div data-role="content">
+		
+		<p>Welcome to the calendar. Enjoy your stay.</p>
+		<a href="#home" data-role="button" class="my-button" data-transition="slidefade" data-direction="reverse">Scram</a>
+
+	</div><!-- /content -->
+
+	<div data-role="footer" data-position="fixed">	
+	</div><!-- /footer -->	
+  </div><!-- /page -->
+
+<!-- Sermons and Resources/////////////////
+/////////////////////////////////////////// -->
+  
+  <div data-role="page" id="sermonsresources" data-theme="a">
+
+	<div data-role="panel" id="mypanel" data-position="right" data-display="push">
+		<p>Settings</p>
+		<ul data-role="listview">
+			<li>This is my panel</li>
+			<li>Log out?</li>
+		</ul>		
+	</div><!-- /panel -->
+  	
+  	<div data-role="header" data-id="myFixedHeader" data-position="fixed">
+  		<h1>Sermons &amp; Resources!</h1>
+
+		<a href="#home" data-icon="home" data-iconpos="notext">Home</a><!-- NOTE: the data-icon on the href here, but down in the ul below, I had to put it in the li, NOT the href? -->
+
+		<a href="#mypanel" data-role="button" data-icon="bars" data-iconpos="notext" data-inline="true"  class="ui-btn-right">Settings</a>
+
+  	</div><!-- /header -->
+  	
+  	<div data-role="content">
+<!-- 
+	<div style="position: relative; width: 100%;">
+		<a href="#sermons" data-transition="slidefade"><img src="images/1.png" alt="sermons" /></a>
+		<span style="position: absolute; top:50px; left:0; background: rgba(0, 0, 0, 0.6); padding: 1px;">
+			<h2>Sermons</h2>
+		</span>
+	</div>
+	<div style="position: relative; width: 100%;">
+		<a href="#studyguides" data-transition="slidefade"><img src="images/1.png" alt="sermons" /></a>
+		<span style="position: absolute; top:50px; left:0; background: rgba(0, 0, 0, 0.6); padding: 1px;">
+			<h2>CG Study Guides</h2>
+		</span>
+	</div>
+-->
+  	
+		<ul data-role="listview" class="ui-grid-a">
+			<li onclick="$.mobile.changePage('#sermons', {transition:'slide'});" class="ui-block-a" data-icon="false" id="sermons-button"><h2>Sermons</h2>
+			</li>
+			<li onclick="$.mobile.changePage('#studyguides', {transition:'slidefade'});" class="ui-block-b" data-icon="false" id="studyguides-button"><h2>CG Study Guides</h2>
+			</li>
+		</ul>
+ 		
+  	</div><!-- /content -->
+  	
+  	<div data-role="footer" data-position="fixed">
+  	</div><!-- /footer -->  	  	
+  </div><!-- /page -->
+
+<!-- Sermons //////////////////////////////
+/////////////////////////////////////////// -->
+  
+  <div data-role="page" id="sermons" data-add-back-btn="true" data-iconpos="notext" data-theme="a">
+
+	<div data-role="panel" id="mypanel" data-position="right" data-display="push">
+		<p>Settings</p>
+		<ul data-role="listview">
+			<li>This is my panel</li>
+			<li>Log out?</li>
+		</ul>		
+	</div><!-- /panel -->
+  	
+  	<div data-role="header" data-id="myFixedHeader" data-position="fixed">
+  		<h1>Sermons</h1>
+
+		<a href="#mypanel" data-role="button" data-icon="bars" data-iconpos="notext" data-inline="true"  class="ui-btn-right">Settings</a>
+
+  	</div><!-- /header -->
+  	
+  	<div data-role="content">
+  	
+		<ul data-role="listview" data-filter="true" data-filter-placeholder="Search...">
+			<li class="individ-sermon-button" data-icon="false" onclick="$.mobile.changePage('#S20130317', {transition:'flip'});">
+					<h2>March 17, 2013</h2>
+					<p><strong>Fred Harrel</strong></p>
+					<p>Random sermon title<p>
+			</li>
+			<li data-icon="false">
+				<a href="#">
+					<h2>March 10, 2013</h2>
+					<p><strong>Matt Nault</strong></p>
+					<p>Random sermon title<p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="#">
+					<h2>March 3, 2013</h2>
+					<p><strong>Fred Harrel</strong></p>
+					<p>Random sermon title<p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="#">
+					<h2>February 24, 2013</h2>
+					<p><strong>Fred Harrel</strong></p>
+					<p>Random sermon title<p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="#">
+					<h2>February 17, 2013</h2>
+					<p><strong>Fred Harrel</strong></p>
+					<p>Random sermon title<p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="#">
+					<h2>February 10, 2013</h2>
+					<p><strong>Fred Harrel</strong></p>
+					<p>Random sermon title<p>
+				</a>
+			</li>
+		</ul>
+  		
+  	</div><!-- /content -->
+  	
+  	<div data-role="footer" data-position="fixed">
+  	</div><!-- /footer -->  	  	
+  </div><!-- /page -->
+
+<!-- Study Guides ////////////////////////////
+/////////////////////////////////////////// -->
+  
+  <div data-role="page" id="studyguides" data-add-back-btn="true" data-iconpos="notext" data-theme="a">
+
+	<div data-role="panel" id="mypanel" data-position="right" data-display="push">
+		<p>Settings</p>
+		<ul data-role="listview">
+			<li>This is my panel</li>
+			<li>Log out?</li>
+		</ul>		
+	</div><!-- /panel -->
+  	
+  	<div data-role="header" data-id="myFixedHeader" data-position="fixed">
+  		<h1>Study Guides</h1>
+
+		<a href="#mypanel" data-role="button" data-icon="bars" data-iconpos="notext" data-inline="true"  class="ui-btn-right">Settings</a>
+
+  	</div><!-- /header -->
+  	
+  	<div data-role="content">
+  	
+		<ul data-role="listview" data-filter="true" data-filter-placeholder="Search...">
+			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-e"> <!-- not sure if I need all the extra li crap in this class...it was just present in the example on the api Listview Widget page, but I accomplished the same thing below wiht just class='ui-bar-c' -->
+				Living the Story
+			</li>
+			<li class="individ-guide-button" data-icon="false">
+				<a href='April 21_ 2013 CG Study Guide.pdf' rel='external'> <!-- I cut out the following script here and replaced with this href b/c embedding the pdf in the page wasn't working quite right: onclick="$.mobile.changePage('#G20130225', {transition:'flip'});" -->
+					<h2>February 25, 2013</h2>
+					<p>Everyday Wisdom: Week 3<p>
+				</a>  
+			</li>
+			<li data-icon="false">
+				<a href="#"><img src="images/1.png" width="218" height="176">
+					<h2>February 19, 2013</h2>
+					<p>Everyday Awe: Week 2<p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="#"><img src="images/1.png" width="218" height="176">
+					<h2>February 3, 2013</h2>
+					<p>Everyday Discipleship: Week 1<p>
+				</a>
+			</li>
+			<li data-role="list-divider" role="heading" class="ui-bar-e">
+				Community Group Studies
+			</li>
+			<li data-icon="false">
+				<a href="#"><img src="images/1.png" width="218" height="176">
+					<h2>February 4, 2013</h2>
+					<p>CG Study Guide<p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="#"><img src="images/1.png" width="218" height="176">
+					<h2>January 28, 2013</h2>
+					<p>CG Study Guide<p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="#"><img src="images/1.png" width="218" height="176">
+					<h2>February 21, 2013</h2>
+					<p>CG Study Guide<p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="#"><img src="images/1.png" width="218" height="176">
+					<h2>February 28, 2013</h2>
+					<p>CG Study Guide<p>
+				</a>
+			</li>
+			
+		</ul>
+  		
+  	</div><!-- /content -->
+  	
+  	<div data-role="footer" data-position="fixed">
+  	</div><!-- /footer -->  	  	
+  </div><!-- /page -->
+
+
+<!-- Social////////////////////////////////
+/////////////////////////////////////////// -->
+  
+  <div data-role="page" id="social" data-theme="a">
+
+	<div data-role="panel" id="mypanel" data-position="right" data-display="push">
+		<p>Settings</p>
+		<ul data-role="listview">
+			<li>This is my panel</li>
+			<li>Log out?</li>
+		</ul>		
+	</div><!-- /panel -->
+  
+  	<div data-role="header" data-id="myFixedHeader" data-position="fixed">
+		<h1>Social Stuff!</h1>
+
+		<a href="#home" data-icon="home" data-iconpos="notext">Home</a><!-- NOTE: the data-icon on the href here, but down in the ul below, I had to put it in the li, NOT the href? -->
+
+		<a href="#mypanel" data-role="button"  data-icon="bars" data-iconpos="notext" data-inline="true" class="ui-btn-right">Settings</a>
+
+	</div><!-- /header -->
+	
+	<div data-role="content">
+		<p>Welcome to the social stuff. Enjoy your stay.</p>
+		<ul data-role="listview">
+			<li data-icon="back"><a href="#home" data-transition="slidefade" data-direction="reverse">Go back, please</a></li>
+		</ul>
+
+	</div><!-- /content -->
+
+	<div data-role="footer" data-position="fixed">
+	</div><!-- /footer -->	
+  </div><!-- /page -->
+  
+<!-- S20130317////////////////////////////////
+/////////////////////////////////////////// -->
+  
+  <div data-role="page" id="S20130317" data-theme="a" data-add-back-btn="true">
+
+<!-- NOT WORKING! This is the original script we could never get to work	
+	<script type="text/javascript">
+		$(document).on("pageshow", "#S20130317", function(){
+		  $("#jquery_jplayer_1").jPlayer({
+			ready: function () {
+			  $(this).jPlayer("setMedia", {
+				m4a: "http://www.jplayer.org/audio/m4a/Miaow-07-Bubble.m4a",
+				oga: "http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
+			  });
+			},
+			swfPath: "/js",
+			supplied: "m4a, oga"
+		  });
+		});
+  </script>
+
+-->
+
+<!-- The version Ethan got working in class 
+	<script type="text/javascript">
+	 $(document).on("pageshow", "#S20130317", function(){
+	  $("#jquery_jplayer_1").jPlayer({
+	   ready: function () {
+		$(this).jPlayer("setMedia", {
+		 mp3: "Stephen.mp3"
+		});
+	   },
+	   swfPath: "",
+	   supplied: "mp3"
+	  });
+	 });
+	</script>
+-->
+
+<!-- MY ATTEMPT AT GETTING AN HTML5 <AUDIO> SOLUTION TO WORK -->
+	<script type="text/javascript">
+		var v = document.getElementsByTagName("audio")[0];
+		v.play();
+	</script><!-- /my attemp at HTML5 audio -->
+	
+	<script type="text/javascript"> //this script stops the downloading of the media
+		var mediaElement = document.getElementById("demo");
+		mediaElement.pause();
+		mediaElement.src = ""; 
+	</script>
+
+	<div data-role="panel" id="mypanel" data-position="right" data-display="push">
+		<p>Settings</p>
+		<ul data-role="listview">
+			<li>This is my panel</li>
+			<li>Log out?</li>
+		</ul>		
+	</div><!-- /panel -->
+  
+  	<div data-role="header" data-id="myFixedHeader" data-position="fixed">
+		<h1>Random Sermon Title</h1>
+
+		<a href="#mypanel" data-role="button"  data-icon="bars" data-iconpos="notext" data-inline="true" class="ui-btn-right"></a>
+
+	</div><!-- /header -->
+	
+	<div class="individ-sermon-background" data-role="content">
+		<p>Info here.</p>
+
+	<audio id="demo" src="Stephen.mp3" type="audio/mp3" preload="auto" controls>
+		<p>Your browser does not support the audio element </p>
+	</audio>
+	<div>
+	  <button onclick="document.getElementById('demo').play()">Play It!</button>
+	  <button onclick="document.getElementById('demo').pause()">Pause It!</button>
+	</div>
+
+<!-- JUST A TEMPORARY HOME BUTTON I PUT IN B/C THE AUTOMATIC BACK BUTTON IN THE HEADER DOESN'T WORK IN BBEDIT PREVIEW
+		<ul data-role="listview">
+			<li data-icon="back"><a href="#home" data-transition="slidefade" data-direction="reverse">Go home, please</a></li>
+		</ul>
+-->
+
+<!-- The other half of the version Ethan got working in class 
+		<div id="jquery_jplayer_1" class="jp-jplayer"></div>
+		<div id="jp_container_1" class="jp-audio">
+			 <a href="#" class="jp-play">Play</a>
+			 <a href="#" class="jp-pause">Pause</a>
+		</div>
+-->
+
+<!-- OLD VERSION THAT WASN'T WORKING RIGHT
+	  <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+	  <div id="jp_container_1" class="jp-audio">
+		<div class="jp-type-single">
+		  <div class="jp-gui jp-interface">
+			<ul class="jp-controls">
+			  <li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
+			  <li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
+			  <li><a href="javascript:;" class="jp-stop" tabindex="1">stop</a></li>
+			  <li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li>
+			  <li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li>
+			  <li><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a></li>
+			</ul>
+			<div class="jp-progress">
+			  <div class="jp-seek-bar">
+				<div class="jp-play-bar"></div>
+			  </div>
+			</div>
+			<div class="jp-volume-bar">
+			  <div class="jp-volume-bar-value"></div>
+			</div>
+			<div class="jp-time-holder">
+			  <div class="jp-current-time"></div>
+			  <div class="jp-duration"></div>
+			  <ul class="jp-toggles">
+				<li><a href="javascript:;" class="jp-repeat" tabindex="1" title="repeat">repeat</a></li>
+				<li><a href="javascript:;" class="jp-repeat-off" tabindex="1" title="repeat off">repeat off</a></li>
+			  </ul>
+			</div>
+		  </div>
+		  <div class="jp-title">
+			<ul>
+			  <li>Bubble</li>
+			</ul>
+		  </div>
+		  <div class="jp-no-solution">
+			<span>Update Required</span>
+			To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+		  </div>
+		</div>
+	  </div>
+--> 
+	</div><!-- /content -->
+
+	<div data-role="footer" data-position="fixed">
+	</div><!-- /footer -->	
+  </div><!-- /page -->
+
+
+
+<!-- CUT THIS PAGE OUT TO TRY LINKING DIRECTLY IN THE <LI>S ON THE PREVIOUS PAGE
+
+<!-- G20130225////////////////////////////////
+/////////////////////////////////////////// -->
+  
+  <div data-role="page" id="G20130225" data-theme="a" data-add-back-btn="true">
+
+	<div data-role="panel" id="mypanel" data-position="right" data-display="push">
+		<p>Settings</p>
+		<ul data-role="listview">
+			<li>This is my panel</li>
+			<li>Log out?</ul>
+		</ul>		
+	</div><!-- /panel -->
+
+  	<div data-role="header" data-id="myFixedHeader" data-position="fixed">
+		<h1>Random Study Guide Title</h1>
+
+		<a href="#mypanel" data-role="button"  data-icon="bars" data-iconpos="notext" data-inline="true" class="ui-btn-right"></a>
+	</div><!-- /header -->
+
+	<div class="individ-guide-background" data-role="content">
+		<div>
+			<embed type='application/pdf' src='April 21_ 2013 CG Study Guide.pdf' style='width: 400px; height: 900px;>
+		</div>
+	</div><!-- /content -->
+
+	<div data-role="footer" data-position="fixed">
+	</div><!-- /footer -->		
+  </div><!-- /page -->
+
+-->
+ 
+  </body>
+</html>

@@ -1,0 +1,142 @@
+/* 
+480x320 - non-retina
+960x640 - retina
+*/
+
+/* Home//////////////////////////////////
+/////////////////////////////////////////// */
+#snr-button {
+    background-image: url('../images/a.jpg');
+    width: 100%;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border: solid black;
+	border-width: 4px 4px 2px 4px;
+}
+
+#snr-button h2 {
+	position: absolute;
+	top: 150px;
+	left: 0px;
+	background: rgba(0, 0, 0, 0.6);
+	padding: 7px 25px 7px 25px;
+}
+
+#cal-button {
+	background-image: url('../images/1.png');
+    width: 62%;
+    height: 170px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border: solid black;
+	border-width: 2px 2px 4px 4px;    
+}
+
+#cal-button h2 {
+	position: absolute;
+	top: 100px;
+	left: 0px;
+	background: rgba(0, 0, 0, 0.6);
+	padding: 7px 25px 7px 25px;
+}
+
+#social-button {
+	background-image: url('../images/b.jpg');
+	width: 38%;
+	height: 170px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border: solid black;
+	border-width: 2px 4px 4px 2px;
+
+}
+
+#social-button h2 {
+	position: absolute;
+	top: 100px;
+	left: 0px;
+	background: rgba(0, 0, 0, 0.6);
+	padding: 7px 25px 7px 25px;
+}
+
+/* These three CSS rules allow me to give the images on the page
+a percentage height 
+div.ui-panel-content-wrap {height: 100%;}
+div.ui-content {height: 100%;}
+ul.ui-grid-a {height: 100%;}
+*/
+
+/* Sermons and Resources/////////////////
+/////////////////////////////////////////// */
+#sermons-button {
+	background-image: url('../images/b.jpg');
+	width: 100%;
+	height: 246px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border: solid black;
+	border-width: 4px 4px 2px 4px;
+}
+
+#sermons-button h2 {
+	position: absolute;
+	top: 100px;
+	left: 0px;
+	background: rgba(0, 0, 0, 0.6);
+	padding: 7px 25px 7px 25px;
+}
+
+#studyguides-button {
+	background-image: url('../images/a.jpg');
+	width: 100%;
+	height: 168px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border: solid black;
+	border-width: 2px 4px 4px 4px;
+}
+
+#studyguides-button h2 {
+	position: absolute;
+	top: 100px;
+	left: 0px;
+	background: rgba(0, 0, 0, 0.6);
+	padding: 7px 25px 7px 25px;
+}
+
+/* Sermons //////////////////////////////
+/////////////////////////////////////////// */
+.individ-sermon-button {
+	background: -moz-linear-gradient(right, rgba(255,255,255,0), rgba(255,255,255,1)), url('../images/1.png');
+	background: -webkit-linear-gradient(left,#444,#444 50%,rgba(255,255,255,0)), url('../images/1.png');
+    background-position: center center;
+    background-size: cover;
+}
+
+.individ-sermon-background {
+	background-image: url('../images/1.png');
+	width: 100%;
+	height: 400px;
+    background-position: center center;
+    background-size: cover; 
+   	
+}
+
+/* Study Guides ////////////////////////////
+/////////////////////////////////////////// */
+.individ-guide-button {
+	background: -moz-linear-gradient(right, rgba(255,255,255,0), rgba(255,255,255,1)), url('../images/3.png');
+    background: -webkit-linear-gradient(left,#444,#444 50%,rgba(255,255,255,0)), url('../images/3.png');
+    background-position: center center;
+    background-size: cover;    	
+}
+
+.individ-guide-background {
+	
+}
